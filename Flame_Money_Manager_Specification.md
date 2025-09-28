@@ -586,9 +586,11 @@ Budgets (id, user_id, category_id, amount, period, created_at)
 Goals (id, user_id, name, target_amount, current_amount, target_date)
 
 -- Bank Integration Tables
-Banks (id, name, code, api_endpoint, supported_features)
-User_Bank_Connections (id, user_id, bank_id, access_token, refresh_token, expires_at, status)
+Banks (id, name, code, api_endpoint, supported_features, csv_template, country)
+User_Bank_Connections (id, user_id, bank_id, access_token, refresh_token, expires_at, status, last_sync)
 Bank_Accounts (id, user_id, bank_connection_id, external_account_id, account_type, balance, currency)
+CSV_Import_Jobs (id, user_id, bank_id, file_path, status, imported_count, error_count, created_at)
+CSV_Import_Templates (id, bank_id, template_name, field_mappings, date_format, currency_format)
 
 -- Forecasting Tables
 Forecasting_Models (id, user_id, model_type, parameters, accuracy_score, last_trained)
