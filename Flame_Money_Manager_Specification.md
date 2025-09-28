@@ -102,6 +102,7 @@ Flame is a modern, intuitive money management application designed to help users
 - **Accessibility:** WCAG 2.1 AA compliance for inclusive design
 - **Dark Mode:** Full dark mode support with automatic system detection
 - **Responsive Design:** Optimized for phones, tablets, and foldable devices
+- **Night Mode:** Comprehensive night mode with custom themes and scheduling
 
 ### Navigation Structure
 ```
@@ -557,6 +558,48 @@ Secondary Navigation:
 - **Responsive Design:** Adapt to different screen sizes and orientations
 - **Accessibility:** Full accessibility support on both platforms
 
+## Night Mode & Theme Management
+
+### Night Mode Features
+- **Automatic Detection:** Follow system dark mode settings
+- **Manual Toggle:** Quick switch between light and dark modes
+- **Scheduled Mode:** Automatic switching based on time of day
+- **Custom Themes:** Multiple dark theme variations
+- **Smooth Transitions:** Animated transitions between themes
+- **Per-App Override:** Override system settings for app-specific preferences
+
+### Theme Options
+- **Light Theme:** Clean, bright interface for daytime use
+- **Dark Theme:** Standard dark mode with high contrast
+- **OLED Dark:** True black theme optimized for OLED displays
+- **Blue Light Filter:** Reduced blue light for evening use
+- **High Contrast:** Enhanced contrast for accessibility
+- **Custom Themes:** User-defined color schemes
+
+### Night Mode Scheduling
+- **Sunset/Sunrise:** Automatic switching based on location and time
+- **Custom Times:** Set specific times for theme switching
+- **Weekend Override:** Different schedules for weekends
+- **Location-Based:** Adjust based on user's timezone
+- **Manual Override:** Temporary override of scheduled changes
+- **Gradual Transition:** Smooth color transitions over time
+
+### Visual Adaptations
+- **Color Inversion:** Smart color inversion for dark mode
+- **Contrast Adjustment:** Automatic contrast optimization
+- **Image Handling:** Proper handling of images in dark mode
+- **Chart Colors:** Dark mode optimized chart and graph colors
+- **Icon Adaptation:** Icons that adapt to theme changes
+- **Text Readability:** Optimized text colors for each theme
+
+### Accessibility in Night Mode
+- **High Contrast Mode:** Enhanced contrast for visual impairments
+- **Color Blind Support:** Themes optimized for color vision deficiencies
+- **Text Scaling:** Proper text scaling in all themes
+- **Screen Reader:** Full screen reader support in dark mode
+- **Focus Indicators:** Clear focus indicators in all themes
+- **Motion Reduction:** Respect reduced motion preferences
+
 ---
 
 ## Technical Architecture
@@ -574,6 +617,8 @@ Secondary Navigation:
 - **Forecasting Engine:** Python-based ML models with TensorFlow/PyTorch
 - **Real-Time Processing:** Apache Kafka for real-time transaction processing
 - **API Gateway:** Kong or AWS API Gateway for bank API management
+- **Theme Management:** React Native Paper with Material Design 3 theming
+- **Dark Mode:** Native dark mode support with system integration
 
 ### Database Schema
 ```sql
@@ -596,6 +641,10 @@ CSV_Import_Templates (id, bank_id, template_name, field_mappings, date_format, c
 Forecasting_Models (id, user_id, model_type, parameters, accuracy_score, last_trained)
 Forecasting_Predictions (id, user_id, model_id, prediction_date, predicted_amount, confidence_interval, actual_amount)
 Recurring_Patterns (id, user_id, transaction_id, pattern_type, frequency, confidence_score, next_occurrence)
+
+-- Theme and UI Tables
+User_Themes (id, user_id, theme_name, is_dark_mode, primary_color, secondary_color, accent_color, custom_colors)
+Theme_Schedules (id, user_id, start_time, end_time, theme_name, days_of_week, is_active)
 
 -- Relationship Tables
 Account_Groups (id, user_id, name, account_ids)
@@ -694,6 +743,8 @@ Recurring_Transactions (id, user_id, template_id, frequency, next_date)
 - **Advanced Forecasting:** ML-powered financial predictions and insights
 - **Multi-Currency Support:** Real-time exchange rates and multi-currency accounts
 - **Investment Tracking:** Portfolio management and performance analytics
+- **Custom Themes:** Unlimited custom theme creation and sharing
+- **Advanced Night Mode:** Scheduled themes, location-based switching, and premium themes
 
 ### Revenue Streams
 - **App Store Purchases:** One-time and subscription purchases
@@ -722,6 +773,7 @@ Recurring_Transactions (id, user_id, template_id, frequency, next_date)
 - **Data Storage:** Local SQLite database
 - **Basic UI:** Material Design (Android) and iOS design guidelines
 - **Manual Bank Connection:** Basic bank account linking without real-time sync
+- **Basic Night Mode:** System dark mode detection and manual toggle
 
 ### Phase 2: Enhanced Features (Months 4-6)
 - **Budgeting System:** Monthly budgets and spending limits
@@ -732,6 +784,7 @@ Recurring_Transactions (id, user_id, template_id, frequency, next_date)
 - **Improved Analytics:** Basic charts and spending analysis
 - **Basic Forecasting:** Simple recurring pattern recognition and basic predictions
 - **Bank API Integration:** ENBD, ADCB, and Banque Populaire API integration
+- **Advanced Night Mode:** Custom themes, scheduling, and OLED optimization
 
 ### Phase 3: Advanced Features (Months 7-9)
 - **Cloud Sync:** Cross-device synchronization
