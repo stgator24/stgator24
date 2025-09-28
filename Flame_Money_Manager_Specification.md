@@ -361,6 +361,22 @@ Secondary Navigation:
 - **Budget Predictions:** Predict budget performance and potential overspending
 - **Goal Achievement Forecasting:** Predict timeline for achieving savings goals
 
+### Recurring Transaction Management
+- **Automatic Detection:** AI identifies recurring patterns from transaction history
+- **Pattern Types:** Daily, weekly, bi-weekly, monthly, quarterly, yearly, and custom patterns
+- **Confidence Scoring:** Statistical confidence levels for identified patterns
+- **User Confirmation:** Manual confirmation and editing of detected patterns
+- **Pattern Learning:** Continuous improvement based on user corrections
+- **Exception Handling:** Handle skipped payments, amount variations, and date changes
+
+### Advanced Recurring Features
+- **Variable Amounts:** Handle recurring transactions with changing amounts (utilities, credit cards)
+- **Seasonal Adjustments:** Account for seasonal variations in income and expenses
+- **Life Event Integration:** Adjust patterns based on major life changes
+- **Pattern Merging:** Combine similar recurring transactions
+- **Pattern Splitting:** Split complex patterns into simpler components
+- **Pattern Archiving:** Archive old patterns without losing historical data
+
 ### Forecasting Models
 - **Time Series Analysis:** Advanced time series models for financial forecasting
 - **Seasonal Adjustment:** Account for seasonal variations in income and expenses
@@ -369,6 +385,14 @@ Secondary Navigation:
 - **Machine Learning:** Continuous learning from user behavior patterns
 - **Confidence Intervals:** Statistical confidence levels for all forecasts
 
+### Recurring Pattern Detection Algorithms
+- **Frequency Analysis:** Identify transaction frequencies using FFT and periodogram analysis
+- **Clustering Algorithms:** Group similar transactions using K-means and DBSCAN
+- **Sequence Mining:** Discover sequential patterns in transaction data
+- **Statistical Tests:** Chi-square and Kolmogorov-Smirnov tests for pattern validation
+- **Machine Learning Models:** Random Forest and Neural Networks for pattern classification
+- **Ensemble Methods:** Combine multiple algorithms for improved accuracy
+
 ### Forecasting Features
 - **Monthly Projections:** Detailed monthly income and expense projections
 - **Annual Forecasts:** Year-end financial position predictions
@@ -376,6 +400,14 @@ Secondary Navigation:
 - **Sensitivity Analysis:** Impact analysis of income/expense changes
 - **Goal Timeline Predictions:** When users will achieve their financial goals
 - **Retirement Planning:** Long-term financial planning and retirement projections
+
+### Recurring Transaction Forecasting
+- **Next Occurrence Prediction:** Predict when recurring transactions will next occur
+- **Amount Forecasting:** Forecast future amounts for variable recurring transactions
+- **Pattern Evolution:** Track how recurring patterns change over time
+- **Break Detection:** Identify when recurring patterns stop or change significantly
+- **New Pattern Discovery:** Automatically discover new recurring patterns
+- **Pattern Confidence:** Real-time confidence scores for all recurring predictions
 
 ### Predictive Insights
 - **Spending Alerts:** Early warnings for potential budget overruns
@@ -412,12 +444,42 @@ Secondary Navigation:
 - **Selective Restore:** Restore specific data types or date ranges
 
 ### Data Import/Export
-- **CSV Import:** Import transactions from spreadsheet files
-- **Bank Statement Import:** Parse and import bank statement files
-- **Excel Integration:** Import/export Excel files with formatting
-- **PDF Import:** Extract transaction data from PDF statements
-- **Data Validation:** Verify imported data accuracy
-- **Import Templates:** Predefined templates for common formats
+
+#### CSV Import System
+- **Multi-Bank CSV Support:** Pre-configured templates for ENBD, ADCB, and Banque Populaire
+- **Custom Field Mapping:** User-friendly interface to map CSV columns to app fields
+- **Format Detection:** Automatic detection of date formats, currency symbols, and decimal separators
+- **Data Validation:** Real-time validation with error highlighting and suggestions
+- **Duplicate Prevention:** Smart duplicate detection using transaction IDs, amounts, and dates
+- **Batch Processing:** Import large files with progress tracking and error reporting
+- **Preview Mode:** Preview imported data before final confirmation
+
+#### Bank-Specific CSV Templates
+- **Emirates NBD (ENBD):** Support for ENBD statement formats with Arabic/English support
+- **ADCB:** Abu Dhabi Commercial Bank statement import with multi-currency support
+- **Banque Populaire:** French banking statement formats with EUR and local currencies
+- **Generic Templates:** Flexible templates for other banks and financial institutions
+
+#### API Import System
+- **Real-Time Sync:** Automatic transaction import and balance updates
+- **Historical Data:** Import up to 2 years of historical transaction data
+- **Incremental Updates:** Only import new transactions since last sync
+- **Error Handling:** Robust error handling with retry mechanisms and user notifications
+- **Sync Scheduling:** Configurable sync frequency (daily, weekly, or on-demand)
+
+#### Universal API Aggregators
+- **Enable Banking:** Universal API connector for multiple banks including BPCE Group
+- **Plaid:** International banking API aggregator (where available)
+- **Yapily:** European Open Banking API aggregator
+- **Tink:** European financial data aggregation platform
+- **Custom Aggregators:** Support for regional banking API aggregators
+
+#### Data Export Options
+- **CSV Export:** Export transactions, accounts, and reports in CSV format
+- **Excel Export:** Formatted Excel files with charts and summaries
+- **PDF Reports:** Professional PDF reports for tax and accounting purposes
+- **JSON Export:** Machine-readable data for integration with other tools
+- **QuickBooks Integration:** Direct export to QuickBooks and other accounting software
 
 ### Data Synchronization
 - **Cross-Device Sync:** Real-time synchronization across devices
