@@ -1,0 +1,10 @@
+node_modules
+.expo
+.turbo
+dist
+build
+.next
+ios
+android
+*.log
+expo-env.d.ts
