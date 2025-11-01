@@ -1,0 +1,21 @@
+{
+  "expo": {
+    "name": "Aurora Budget",
+    "slug": "aurora-budget",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {},
+    "web": {
+      "bundler": "metro"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "local-prototype"
+      }
+    }
+  }
+}

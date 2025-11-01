@@ -1,0 +1,15 @@
+{
+  "name": "@budget/domain",
+  "version": "0.1.0",
+  "private": true,
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "scripts": {
+    "build": "tsc --project tsconfig.json",
+    "lint": "eslint \"src/**/*.ts\"",
+    "test": "echo 'no tests yet for @budget/domain'"
+  },
+  "dependencies": {
+    "zod": "^3.23.8"
+  }
+}

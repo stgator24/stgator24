@@ -1,0 +1,17 @@
+{
+  "extends": "../../packages/tsconfig/tsconfig.json",
+  "compilerOptions": {
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "jsx": "preserve",
+    "allowJs": true,
+    "noEmit": true,
+    "incremental": true
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "**/*.cjs", "**/*.mjs"],
+  "exclude": ["node_modules"],
+  "references": [
+    { "path": "../../packages/ui" },
+    { "path": "../../packages/domain" }
+  ]
+}
